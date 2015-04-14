@@ -19,6 +19,7 @@ namespace vFattura
         {
             InitializeComponent();
             toolStripStatusLabel2.Text = Application.ProductVersion;
+            this.Text = Application.ProductName + " " + Application.ProductVersion;
         }
        
         public void doOpenDocument(string filename)
@@ -85,7 +86,7 @@ namespace vFattura
 
                     toolStrip1.Items.Add(attachmentButton);
                 }
-                this.Text = Application.ProductName + " - " + filename;
+                this.Text = Application.ProductName + " " + Application.ProductVersion + " - " + filename;
             }
             catch (Exception ex)
             {
