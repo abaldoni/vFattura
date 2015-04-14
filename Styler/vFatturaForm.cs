@@ -9,6 +9,7 @@ using System.Xml;
 using System.Xml.Xsl;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace vFattura
 {
@@ -17,21 +18,54 @@ namespace vFattura
         public vFatturaForm()
         {
             InitializeComponent();
+            toolStripStatusLabel2.Text = Application.ProductVersion;
         }
        
         public void doOpenDocument(string filename)
         {
             try
             {
-                string outfile = Path.GetTempFileName().Replace(".tmp", ".html");
                 XslCompiledTransform transform = new XslCompiledTransform();
 
+                // Hack per consentire la trasformazione di file XML 1.1 che
+                // non sono supportati da .NET
+                // Read the file as one string.
+                string xmlHackFind = "version=\"1\\.1\"";
+                string xmlHackReplace = "version=\"1.0\"";
+                Regex rgx = new Regex(xmlHackFind);
+
+                System.IO.StreamReader xmlFile = new System.IO.StreamReader(filename);
+                string xmlString = xmlFile.ReadToEnd();
+                xmlFile.Close();
+                string xmlHacked = rgx.Replace(xmlString, xmlHackReplace);
+
                 transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.Fattura_1_1)));
-                transform.Transform(filename, outfile);
-                webBrowser1.Navigate(outfile);
+                using (StringReader sr = new StringReader(xmlHacked))
+                {
+                    using (XmlReader xr = XmlReader.Create(sr))
+                    {
+                        using (StringWriter sw = new StringWriter())
+                        {
+                            transform.Transform(xr, null, sw);
+
+                            // http://stackoverflow.com/questions/5362591/how-to-display-the-string-html-contents-into-webbrowser-control
+                            webBrowser1.Navigate("about:blank");
+                            try
+                            {
+                                if (webBrowser1.Document != null)
+                                {
+                                    webBrowser1.Document.Write(string.Empty);
+                                }
+                            }
+                            catch (Exception e)
+                            { } // do nothing with this
+                            webBrowser1.DocumentText = sw.ToString();
+                        }
+                    }
+                }
 
                 XmlDocument fattura = new XmlDocument();
-                fattura.Load(filename);
+                fattura.Load(new StringReader(xmlHacked));
                 XmlNodeList attachments = fattura.SelectNodes("/*/FatturaElettronicaBody/Allegati");
                 int i = attachments.Count;
                 foreach (XmlNode attachment in attachments)
