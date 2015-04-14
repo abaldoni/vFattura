@@ -64,6 +64,11 @@ namespace vFattura
                     }
                 }
 
+                // Parse degli attachment della fattura e reset della barra dei pulsanti.
+                toolStrip1.Items.Clear();
+                toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openDocument, printDocument, closeWindow});
+
+
                 XmlDocument fattura = new XmlDocument();
                 fattura.Load(new StringReader(xmlHacked));
                 XmlNodeList attachments = fattura.SelectNodes("/*/FatturaElettronicaBody/Allegati");
@@ -76,9 +81,11 @@ namespace vFattura
                     attachmentButton.Click += (sender, e) => pdfDocument_Click(sender, e, attachment);
                     attachmentButton.ToolTipText = attachment["NomeAttachment"].InnerText;
                     attachmentButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+                    attachmentButton.Name = "document_number_" + i;
 
                     toolStrip1.Items.Add(attachmentButton);
                 }
+                this.Text = Application.ProductName + " - " + filename;
             }
             catch (Exception ex)
             {
@@ -91,8 +98,16 @@ namespace vFattura
         {
             try
             {
+                string fileName;
                 byte[] bytes = Convert.FromBase64String(attachment["Attachment"].InnerText.Trim());
-                string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + "." + attachment["FormatoAttachment"].InnerText.ToLower().Trim();
+                // Il nodo FormatoAttachment è opzionale...
+                if (attachment["FormatoAttachment"] != null) { 
+                    fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + "." + attachment["FormatoAttachment"].InnerText.ToLower().Trim();
+                }
+                else
+                {
+                    fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + attachment["NomeAttachment"].InnerText.Trim();
+                }
                 System.IO.FileStream stream = new FileStream(fileName, FileMode.CreateNew);
                 System.IO.BinaryWriter writer = new BinaryWriter(stream);
                 writer.Write(bytes, 0, bytes.Length);
