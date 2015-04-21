@@ -61,6 +61,21 @@ namespace vFattura.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///
+        ///	&lt;xsl:templ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AT {
+            get {
+                return ResourceManager.GetString("AT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap document_number_1 {
@@ -151,6 +166,36 @@ namespace vFattura.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:te [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DT {
+            get {
+                return ResourceManager.GetString("DT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:te [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string EC {
+            get {
+                return ResourceManager.GetString("EC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;xsl:stylesheet 
         ///	version=&quot;1.1&quot; 
@@ -171,6 +216,99 @@ namespace vFattura.Properties {
         internal static string Fattura_1_1 {
             get {
                 return ResourceManager.GetString("Fattura_1_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:te [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MC {
+            get {
+                return ResourceManager.GetString("MC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:template match=&quot;/&quot;&gt;
+        ///		&lt;html&gt;
+        ///			&lt;head&gt;
+        ///				&lt;m [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MT {
+            get {
+                return ResourceManager.GetString("MT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:te [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string NE {
+            get {
+                return ResourceManager.GetString("NE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///	
+        ///   &lt;xsl:te [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string NS {
+            get {
+                return ResourceManager.GetString("NS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///
+        ///	&lt;xsl:templ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string RC {
+            get {
+                return ResourceManager.GetString("RC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:a=&quot;http://www.fatturapa.gov.it/sdi/messaggi/v1.0&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+        ///	&lt;xsl:output version=&quot;4.0&quot; method=&quot;html&quot; indent=&quot;no&quot; encoding=&quot;UTF-8&quot; doctype-public=&quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; doctype-system=&quot;http://www.w3.org/TR/html4/loose.dtd&quot;/&gt;
+        ///	&lt;xsl:param name=&quot;SV_OutputFormat&quot; select=&quot;&apos;HTML&apos;&quot;/&gt;
+        ///	&lt;xsl:variable name=&quot;XML&quot; select=&quot;/&quot;/&gt;
+        ///
+        ///	&lt;xsl:templ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SE {
+            get {
+                return ResourceManager.GetString("SE", resourceCulture);
             }
         }
     }

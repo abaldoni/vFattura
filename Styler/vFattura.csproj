@@ -109,6 +109,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="document-invoice.ico" />
+    <None Include="Resources\SE_v1.0.xsl" />
+    <None Include="Resources\RC_v1.0.xsl" />
+    <None Include="Resources\NS_v1.0.xsl" />
+    <None Include="Resources\NE_v1.0.xsl" />
+    <None Include="Resources\MT_v1.0.xsl" />
+    <None Include="Resources\MC_v1.0.xsl" />
+    <None Include="Resources\EC_v1.0.xsl" />
+    <None Include="Resources\DT_v1.0.xsl" />
+    <None Include="Resources\AT_v1.1.xsl" />
     <None Include="Resources\Fattura-1.1.xslt" />
     <None Include="Resources\document-number-9.png" />
     <None Include="Resources\document-number-8.png" />

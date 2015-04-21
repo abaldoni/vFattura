@@ -148,4 +148,31 @@
   <data name="Fattura_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fattura-1.1.xslt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="AT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AT_v1.1.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DT_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="EC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EC_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="MC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MC_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="MT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MT_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="NE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NE_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="NS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NS_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="RC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RC_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SE_v1.0.xsl;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

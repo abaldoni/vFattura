@@ -21,7 +21,7 @@ namespace vFattura
             toolStripStatusLabel2.Text = Application.ProductVersion;
             this.Text = Application.ProductName + " " + Application.ProductVersion;
         }
-       
+
         public void doOpenDocument(string filename)
         {
             try
@@ -40,7 +40,48 @@ namespace vFattura
                 xmlFile.Close();
                 string xmlHacked = rgx.Replace(xmlString, xmlHackReplace);
 
-                transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.Fattura_1_1)));
+                // Check del tipo di file XML da visualizzare (formato filename da specifiche FatturaPA)
+                var groups = Regex.Match(filename, ".*_([A-Z]{2})_.*").Groups;
+                if (groups.Count > 1)
+                {
+                    switch (groups[1].Value)
+                    {
+                        case "DT":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.DT)));
+                            break;
+                        case "EC":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.EC)));
+                            break;
+                        case "MC":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.MC)));
+                            break;
+                        case "MT":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.MT)));
+                            break;
+                        case "NE":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.NE)));
+                            break;
+                        case "NS":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.NS)));
+                            break;
+                        case "RC":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.RC)));
+                            break;
+                        case "SE":
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.SE)));
+                            break;
+                        default:
+                            // Qualsiasi altro file è considerato una fattura...
+                            transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.Fattura_1_1)));
+                            break;
+
+                    }
+                }
+                else
+                {
+                    transform.Load(XmlReader.Create(new StringReader(vFattura.Properties.Resources.Fattura_1_1)));
+                }
+
                 using (StringReader sr = new StringReader(xmlHacked))
                 {
                     using (XmlReader xr = XmlReader.Create(sr))
@@ -58,7 +99,9 @@ namespace vFattura
                                     webBrowser1.Document.Write(string.Empty);
                                 }
                             }
+                            #pragma warning disable 0168
                             catch (Exception e)
+                            #pragma warning restore 0168
                             { } // do nothing with this
                             webBrowser1.DocumentText = sw.ToString();
                         }
@@ -67,7 +110,7 @@ namespace vFattura
 
                 // Parse degli attachment della fattura e reset della barra dei pulsanti.
                 toolStrip1.Items.Clear();
-                toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openDocument, printDocument, closeWindow});
+                toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openDocument, printDocument, closeWindow });
 
 
                 XmlDocument fattura = new XmlDocument();
@@ -77,7 +120,7 @@ namespace vFattura
                 foreach (XmlNode attachment in attachments)
                 {
                     ToolStripButton attachmentButton = new ToolStripButton();
-                    
+
                     attachmentButton.Image = ((System.Drawing.Image)vFattura.Properties.Resources.ResourceManager.GetObject("document_number_" + i--));
                     attachmentButton.Click += (sender, e) => pdfDocument_Click(sender, e, attachment);
                     attachmentButton.ToolTipText = attachment["NomeAttachment"].InnerText;
@@ -102,7 +145,8 @@ namespace vFattura
                 string fileName;
                 byte[] bytes = Convert.FromBase64String(attachment["Attachment"].InnerText.Trim());
                 // Il nodo FormatoAttachment è opzionale...
-                if (attachment["FormatoAttachment"] != null) { 
+                if (attachment["FormatoAttachment"] != null)
+                {
                     fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + "." + attachment["FormatoAttachment"].InnerText.ToLower().Trim();
                 }
                 else
@@ -151,5 +195,5 @@ namespace vFattura
             this.Close();
         }
 
-     }
+    }
 }
